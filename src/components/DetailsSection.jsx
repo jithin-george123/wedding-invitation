@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, Navigation } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export const DetailsSection = ({ data }) => {
   const {
@@ -44,7 +45,7 @@ export const DetailsSection = ({ data }) => {
         {/* Background artwork */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none"
-          style={{ backgroundImage: 'url(/kayal/details_bg.png)' }}
+          style={{ backgroundImage: `url(${getAssetUrl('/kayal/details_bg.png')})` }}
         />
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#5C5148]/15 text-center">

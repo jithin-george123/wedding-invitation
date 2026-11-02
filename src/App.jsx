@@ -12,6 +12,7 @@ import { GuestBookSection } from './components/GuestBookSection';
 import { FooterSection } from './components/FooterSection';
 import { MusicPlayer } from './components/MusicPlayer';
 import { AutoscrollEngine } from './components/AutoscrollEngine';
+import { getAssetUrl } from './utils/assets';
 
 export function App() {
   // Query parameters: preview=true, autoscroll=true
@@ -82,7 +83,7 @@ export function App() {
 
       {/* Jasmine corner floral element */}
       <img
-        src="/kayal/jasmine_corner.png"
+        src={getAssetUrl('/kayal/jasmine_corner.png')}
         alt="Jasmine Flowers Decoration"
         className="kayal-corner-jasmine pointer-events-none z-20"
       />

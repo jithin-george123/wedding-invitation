@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assets';
 
 export const StorySection = ({ data }) => {
   const {
@@ -10,7 +11,8 @@ export const StorySection = ({ data }) => {
     images
   } = data;
 
-  const storyImage = images?.coupleStory || "/wedding/photos/photo1.jpg";
+  const rawImage = images?.coupleStory || "/wedding/photos/photo1.jpg";
+  const storyImage = getAssetUrl(rawImage);
 
   return (
     <section id="story-section" className="kayal-story-section relative pt-12 sm:pt-16 pb-24 px-4 sm:px-6 md:px-12 bg-[#FAF7F0] overflow-hidden">

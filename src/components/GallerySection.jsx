@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GALLERY_ITEMS_CONFIG } from '../constants';
+import { getAssetUrl } from '../utils/assets';
 
 export const GallerySection = ({ data }) => {
   const {
@@ -16,7 +17,7 @@ export const GallerySection = ({ data }) => {
 
   const galleryList = GALLERY_ITEMS_CONFIG.map((item, idx) => ({
     ...item,
-    src: images[item.key] || `/wedding/photos/photo${idx + 2}.jpg`
+    src: getAssetUrl(images[item.key] || `/wedding/photos/photo${idx + 2}.jpg`)
   }));
 
   const openLightbox = (index) => setActiveIdx(index);

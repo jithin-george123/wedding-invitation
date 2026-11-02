@@ -1,6 +1,7 @@
 import React from 'react';
 import { TypewriterText } from './TypewriterText';
 import { Sparkles } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export const HeroSection = ({ data }) => {
   const {
@@ -146,7 +147,7 @@ export const HeroSection = ({ data }) => {
 
         {/* Landscape Painting with watercolor feathered alpha mask */}
         <img
-          src="/kayal/hero_landscape.png"
+          src={getAssetUrl('/kayal/hero_landscape.png')}
           alt="Kerala backwaters watercolor painting with wedding procession"
           className="w-full h-auto min-h-[320px] max-h-[660px] object-cover object-bottom block"
           style={{

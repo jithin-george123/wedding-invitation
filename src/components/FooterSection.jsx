@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export const FooterSection = ({ data }) => {
   const {
@@ -17,7 +18,7 @@ export const FooterSection = ({ data }) => {
         {/* Lotus footer decorative art */}
         <div className="kayal-lotus-footer-art w-44 sm:w-56 mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
           <img
-            src="/kayal/lotus_footer.png"
+            src={getAssetUrl('/kayal/lotus_footer.png')}
             alt="Lotus Flower Ornament"
             className="w-full h-auto object-contain"
           />
