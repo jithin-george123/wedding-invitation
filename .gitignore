@@ -9,6 +9,8 @@ dist-ssr
 *.local
 
 # Temporary / Scratch files
+__pycache__/
+*.pyc
 temp_analysis
 downloaded_assets
 browser_saved_data.json
