@@ -82,9 +82,23 @@ export const DetailsSection = ({ data }) => {
             <h3 className="font-serif text-3xl sm:text-4xl text-[#2A4D45] font-semibold my-1">
               {muhurthamTime}
             </h3>
-            <p className="text-xs sm:text-sm text-[#5C5148] italic font-serif">
-              St. Francis Church, Perambra
-            </p>
+            <div className="text-center my-1">
+              <h4 className="font-serif text-xl sm:text-2xl text-[#2C241E] font-medium leading-snug">
+                St. Francis Church
+              </h4>
+              <p className="font-sans text-xs sm:text-sm text-[#5C5148] font-medium mt-0.5">
+                Perambra, Kozhikode
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=St.+Francis+Church,+Perambra,+Kozhikode,+Kerala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 py-2 px-5 rounded-full text-xs font-sans font-semibold tracking-wider uppercase border border-[#9E7D47]/40 bg-white text-[#2C241E] hover:border-[#2A4D45] hover:text-[#2A4D45] transition-all flex items-center gap-1.5 shadow-sm cursor-pointer hover:scale-105"
+            >
+              <Navigation size={13} />
+              Get Directions
+            </a>
           </div>
 
           {/* Column 3: Venue & Map */}
@@ -92,20 +106,22 @@ export const DetailsSection = ({ data }) => {
             <div className="kayal-detail-icon w-14 h-14 rounded-full bg-[#2A4D45]/10 text-[#2A4D45] flex items-center justify-center mb-1">
               <MapPin size={22} />
             </div>
-            <p className="kayal-eyebrow text-[11px] md:text-xs text-[#8A7E75] tracking-[0.3em] uppercase">
+            <p className="kayal-eyebrow text-[11px] md:text-xs text-[#8A7E75] tracking-[0.3em] uppercase font-semibold">
               Wedding Feast Venue
             </p>
-            <h3 className="font-serif text-2xl sm:text-3xl text-[#2C241E] font-medium">
-              {venueName}
-            </h3>
-            <p className="font-sans text-xs sm:text-sm text-[#5C5148]">
-              {venueLocation}
-            </p>
+            <div className="text-center my-1">
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#2C241E] font-medium leading-snug">
+                {venueName}
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-[#5C5148] font-medium mt-0.5">
+                {venueLocation}
+              </p>
+            </div>
             <a
               href={venueMapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueName + ', ' + venueLocation)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 py-2 px-5 rounded-full text-xs font-sans font-semibold tracking-wider uppercase border border-[#5C5148]/30 bg-white text-[#2C241E] hover:border-[#2A4D45] hover:text-[#2A4D45] transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105"
+              className="mt-2 py-2 px-5 rounded-full text-xs font-sans font-semibold tracking-wider uppercase border border-[#5C5148]/30 bg-white text-[#2C241E] hover:border-[#2A4D45] hover:text-[#2A4D45] transition-all flex items-center gap-1.5 shadow-sm cursor-pointer hover:scale-105"
             >
               <Navigation size={13} />
               Get Directions
