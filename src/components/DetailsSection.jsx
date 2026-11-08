@@ -18,8 +18,8 @@ export const DetailsSection = ({ data }) => {
   const handleCalendarAdd = (e) => {
     e.preventDefault();
     const title = `${groomName} & ${brideName} Wedding Ceremony`;
-    const details = `Holy Matrimony of ${groomName} & ${brideName} at ${venueName}, ${venueLocation}. Service: ${muhurthamTime}.`;
-    const location = `${venueName}, ${venueLocation}`;
+    const details = `Wedding Holy Qurbana of ${groomName} & ${brideName} at St. Francis Church, Perambra (${muhurthamTime}), followed by the Wedding Feast & Reception at ${venueName}, ${venueLocation}.`;
+    const location = `St. Francis Church, Perambra & ${venueName}, ${venueLocation}`;
     
     let startIso = "20261002T050000Z";
     let endIso = "20261002T090000Z";
@@ -71,19 +71,19 @@ export const DetailsSection = ({ data }) => {
             </button>
           </div>
 
-          {/* Column 2: Holy Matrimony */}
+          {/* Column 2: Wedding Holy Qurbana */}
           <div className="kayal-detail-col kayal-detail-col-matrimony p-8 sm:p-10 bg-[#FAF7F0]/60 flex flex-col justify-between items-center gap-3">
             <div className="kayal-detail-icon w-14 h-14 rounded-full bg-[#9E7D47]/15 text-[#9E7D47] flex items-center justify-center mb-1">
               <Clock size={22} />
             </div>
             <p className="kayal-eyebrow text-[11px] md:text-xs text-[#9E7D47] tracking-[0.3em] uppercase font-semibold">
-              Holy Matrimony
+              Wedding Holy Qurbana
             </p>
             <h3 className="font-serif text-3xl sm:text-4xl text-[#2A4D45] font-semibold my-1">
               {muhurthamTime}
             </h3>
             <p className="text-xs sm:text-sm text-[#5C5148] italic font-serif">
-              Solemn Nuptial Blessing & Exchange of Vows
+              St. Francis Church, Perambra
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export const DetailsSection = ({ data }) => {
               <MapPin size={22} />
             </div>
             <p className="kayal-eyebrow text-[11px] md:text-xs text-[#8A7E75] tracking-[0.3em] uppercase">
-              Ceremony Venue
+              Wedding Feast Venue
             </p>
             <h3 className="font-serif text-2xl sm:text-3xl text-[#2C241E] font-medium">
               {venueName}

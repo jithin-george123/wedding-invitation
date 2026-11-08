@@ -46,7 +46,7 @@ export const VenueSection = ({ data }) => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <p className="kayal-eyebrow text-xs tracking-[0.25em] text-[#2A4D45] font-sans font-semibold block mb-2">
-            CEREMONY VENUE & LOCATION
+            WEDDING RECEPTION & FEAST VENUE
           </p>
           <h2 className={`${getVenueFontClass()} text-[#2C241E] mb-2 leading-tight`}>
             {venueName}

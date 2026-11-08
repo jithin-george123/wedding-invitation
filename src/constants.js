@@ -31,14 +31,14 @@ A SHARED HORIZON`,
   events: [
     {
       id: "event_1",
-      title: "Holy Matrimony",
-      subtitle: "Solemnization of Marriage",
+      title: "Wedding Holy Qurbana",
+      subtitle: "Solemnization & Nuptial Blessing",
       date: "30 · 12 · 2026",
       time: "10:30 AM - 11:30 AM",
-      venue: "Grand Hall, DAFFODILS Convention centre",
-      location: "Kozhikode, Kerala",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
-      description: "Solemn wedding service and nuptial blessing, uniting Jerome & Jomol in Holy Matrimony under God's grace.",
+      venue: "St. Francis Church",
+      location: "Perambra, Kozhikode",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=St.+Francis+Church,+Perambra,+Kozhikode,+Kerala",
+      description: "Solemn Wedding Holy Qurbana and Nuptial Blessing, uniting Jerome & Jomol in sacred marriage under God's grace.",
       isoDate: "2026-12-30T10:30:00"
     },
     {
