@@ -370,7 +370,7 @@ export const KayalStudio = ({
 
               <div>
                 <label className="block text-[11px] font-sans font-semibold tracking-wider uppercase text-[#5C5148] mb-1">
-                  Auspicious Muhurtham Time
+                  Holy Matrimony Service Time
                 </label>
                 <input
                   type="text"

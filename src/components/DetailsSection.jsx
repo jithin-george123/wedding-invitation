@@ -18,7 +18,7 @@ export const DetailsSection = ({ data }) => {
   const handleCalendarAdd = (e) => {
     e.preventDefault();
     const title = `${groomName} & ${brideName} Wedding Ceremony`;
-    const details = `Sacred Wedding Ceremony of ${groomName} & ${brideName} at ${venueName}, ${venueLocation}. Muhurtham: ${muhurthamTime}.`;
+    const details = `Holy Matrimony of ${groomName} & ${brideName} at ${venueName}, ${venueLocation}. Service: ${muhurthamTime}.`;
     const location = `${venueName}, ${venueLocation}`;
     
     let startIso = "20261002T050000Z";
@@ -71,19 +71,19 @@ export const DetailsSection = ({ data }) => {
             </button>
           </div>
 
-          {/* Column 2: Auspicious Muhurtham */}
-          <div className="kayal-detail-col kayal-detail-col-muhurtham p-8 sm:p-10 bg-[#FAF7F0]/60 flex flex-col justify-between items-center gap-3">
+          {/* Column 2: Holy Matrimony */}
+          <div className="kayal-detail-col kayal-detail-col-matrimony p-8 sm:p-10 bg-[#FAF7F0]/60 flex flex-col justify-between items-center gap-3">
             <div className="kayal-detail-icon w-14 h-14 rounded-full bg-[#9E7D47]/15 text-[#9E7D47] flex items-center justify-center mb-1">
               <Clock size={22} />
             </div>
             <p className="kayal-eyebrow text-[11px] md:text-xs text-[#9E7D47] tracking-[0.3em] uppercase font-semibold">
-              Auspicious Muhurtham
+              Holy Matrimony
             </p>
             <h3 className="font-serif text-3xl sm:text-4xl text-[#2A4D45] font-semibold my-1">
               {muhurthamTime}
             </h3>
             <p className="text-xs sm:text-sm text-[#5C5148] italic font-serif">
-              Auspicious time for the sacred Mangalyadharanam
+              Solemn Nuptial Blessing & Exchange of Vows
             </p>
           </div>
 

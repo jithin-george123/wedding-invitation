@@ -31,26 +31,26 @@ A SHARED HORIZON`,
   events: [
     {
       id: "event_1",
-      title: "Holy Matrimony & Muhurtham",
-      subtitle: "The Sacred Union Ceremony",
+      title: "Holy Matrimony",
+      subtitle: "Solemnization of Marriage",
       date: "30 · 12 · 2026",
       time: "10:30 AM - 11:30 AM",
       venue: "Grand Hall, DAFFODILS Convention centre",
       location: "Kozhikode, Kerala",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
-      description: "Traditional sacred wedding ceremony followed by auspicious blessings and joyous greetings.",
+      description: "Solemn wedding service and nuptial blessing, uniting Jerome & Jomol in Holy Matrimony under God's grace.",
       isoDate: "2026-12-30T10:30:00"
     },
     {
       id: "event_2",
-      title: "Wedding Feast & Reception",
-      subtitle: "Celebration of Happiness",
+      title: "Wedding Reception & Feast",
+      subtitle: "Celebration with Family & Friends",
       date: "30 · 12 · 2026",
       time: "12:00 PM Onwards",
       venue: "Banquet Lawn, DAFFODILS Convention centre",
       location: "Kozhikode, Kerala",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
-      description: "Join us for a grand festive feast followed by music, laughter, and cherishing special moments with family and friends.",
+      description: "Join us for the wedding reception and grand feast, followed by cake cutting, music, and joyful celebrations.",
       isoDate: "2026-12-30T12:00:00"
     }
   ],
