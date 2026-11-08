@@ -349,7 +349,7 @@ export const KayalStudio = ({
                   <input
                     type="text"
                     value={data.date}
-                    placeholder="e.g. 30 · 10 · 2026"
+                    placeholder="e.g. 30 · 12 · 2026"
                     onChange={(e) => onChange({ ...data, date: e.target.value })}
                     className="w-full py-2 px-3 rounded-xl border border-[#5C5148]/20 bg-white text-sm"
                   />
@@ -388,7 +388,7 @@ export const KayalStudio = ({
                 <input
                   type="text"
                   value={data.dateIso}
-                  placeholder="2026-10-30T10:30:00"
+                  placeholder="2026-12-30T10:30:00"
                   onChange={(e) => onChange({ ...data, dateIso: e.target.value })}
                   className="w-full py-2 px-3 rounded-xl border border-[#5C5148]/20 bg-white text-sm font-mono text-xs"
                 />

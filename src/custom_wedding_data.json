@@ -7,9 +7,9 @@
   "heroEyebrow": "THE WEDDING CELEBRATION OF",
   "heroSubtitle": "TOGETHER WITH THEIR FAMILIES",
   "topCornerQuote": "TWO SOULS\nA BRIGHTER\nTOMORROW",
-  "date": "30 · 10 · 2026",
+  "date": "30 · 12 · 2026",
   "dateDay": "Wednesday",
-  "dateIso": "2026-10-30T10:30:00",
+  "dateIso": "2026-12-30T10:30:00",
   "muhurthamTime": "10:30 AM",
   "venueName": "DAFFODILS Convention centre",
   "venueLocation": "Kozhikode, Kerala",
@@ -30,25 +30,25 @@
       "id": "event_1",
       "title": "Holy Matrimony & Muhurtham",
       "subtitle": "The Sacred Union Ceremony",
-      date: "30 · 10 · 2026",
+      "date": "30 · 12 · 2026",
       "time": "10:30 AM - 11:30 AM",
       "venue": "Grand Hall, DAFFODILS Convention centre",
       "location": "Kozhikode, Kerala",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
       "description": "Traditional sacred wedding ceremony followed by auspicious blessings and joyous greetings.",
-      "isoDate": "2026-10-30T10:30:00"
+      "isoDate": "2026-12-30T10:30:00"
     },
     {
       "id": "event_2",
       "title": "Wedding Feast & Reception",
       "subtitle": "Celebration of Happiness",
-      date: "30 · 10 · 2026",
+      "date": "30 · 12 · 2026",
       "time": "12:00 PM Onwards",
       "venue": "Banquet Lawn, DAFFODILS Convention centre",
       "location": "Kozhikode, Kerala",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
       "description": "Join us for a grand festive feast followed by music, laughter, and cherishing special moments with family and friends.",
-      "isoDate": "2026-10-30T12:00:00"
+      "isoDate": "2026-12-30T12:00:00"
     }
   ],
   "galleryTitle": "Moments in Time",

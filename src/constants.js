@@ -9,9 +9,9 @@ export const DEFAULT_WEDDING_DATA = {
   topCornerQuote: `TWO SOULS
 A BRIGHTER
 TOMORROW`,
-  date: "30 · 10 · 2026",
+  date: "30 · 12 · 2026",
   dateDay: "Wednesday",
-  dateIso: "2026-10-30T10:30:00",
+  dateIso: "2026-12-30T10:30:00",
   muhurthamTime: "10:30 AM",
   venueName: "DAFFODILS Convention centre",
   venueLocation: "Kozhikode, Kerala",
@@ -33,25 +33,25 @@ A SHARED HORIZON`,
       id: "event_1",
       title: "Holy Matrimony & Muhurtham",
       subtitle: "The Sacred Union Ceremony",
-      date: "30 · 10 · 2026",
+      date: "30 · 12 · 2026",
       time: "10:30 AM - 11:30 AM",
       venue: "Grand Hall, DAFFODILS Convention centre",
       location: "Kozhikode, Kerala",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
       description: "Traditional sacred wedding ceremony followed by auspicious blessings and joyous greetings.",
-      isoDate: "2026-10-30T10:30:00"
+      isoDate: "2026-12-30T10:30:00"
     },
     {
       id: "event_2",
       title: "Wedding Feast & Reception",
       subtitle: "Celebration of Happiness",
-      date: "30 · 10 · 2026",
+      date: "30 · 12 · 2026",
       time: "12:00 PM Onwards",
       venue: "Banquet Lawn, DAFFODILS Convention centre",
       location: "Kozhikode, Kerala",
       mapUrl: "https://www.google.com/maps/search/?api=1&query=11.55937,75.79857",
       description: "Join us for a grand festive feast followed by music, laughter, and cherishing special moments with family and friends.",
-      isoDate: "2026-10-30T12:00:00"
+      isoDate: "2026-12-30T12:00:00"
     }
   ],
   galleryTitle: "Moments in Time",
@@ -135,7 +135,7 @@ export const INITIAL_WISHES = [
     relationship: "Family",
     tag: "❤️ With Love",
     message: "Wishing dearest Jerome and Jomol an abundance of joy, laughter, and lifelong togetherness. Looking forward to celebrating with you at Daffodils!",
-    date: "Oct 28, 2026"
+    date: "Dec 28, 2026"
   },
   {
     id: "wish_2",
@@ -143,7 +143,7 @@ export const INITIAL_WISHES = [
     relationship: "Friend",
     tag: "✨ Best Wishes",
     message: "Congratulations to the most wonderful couple! May your journey ahead be as joyful and enchanting as ever. Can't wait for the grand celebration!",
-    date: "Oct 29, 2026"
+    date: "Dec 29, 2026"
   },
   {
     id: "wish_3",
@@ -151,6 +151,6 @@ export const INITIAL_WISHES = [
     relationship: "Colleague",
     tag: "🎉 Congratulations",
     message: "So thrilled for both of you, Jerome & Jomol! Wishing you both a lifetime of love and beautiful adventures together.",
-    date: "Oct 30, 2026"
+    date: "Dec 30, 2026"
   }
 ];
