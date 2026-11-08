@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Heart, Send, CheckCircle2, User, Phone, Users } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 export const RsvpSection = ({ data, onRsvpSubmit }) => {
   const {
@@ -13,42 +14,58 @@ export const RsvpSection = ({ data, onRsvpSubmit }) => {
     phone: '',
     attending: 'yes',
     guestsCount: '2',
-    mealPreference: 'Vegetarian Sadhya',
     message: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name.trim()) return;
 
     setLoading(true);
 
-    setTimeout(() => {
-      const newRsvp = {
-        id: `rsvp_${Date.now()}`,
-        name: form.name.trim(),
-        phone: form.phone.trim(),
-        attending: form.attending === 'yes',
-        guestsCount: form.attending === 'yes' ? parseInt(form.guestsCount, 10) : 0,
-        mealPreference: form.mealPreference,
-        message: form.message.trim(),
-        submittedAt: new Date().toISOString()
-      };
+    const newRsvp = {
+      id: `rsvp_${Date.now()}`,
+      name: form.name.trim(),
+      phone: form.phone.trim(),
+      attending: form.attending === 'yes',
+      guestsCount: form.attending === 'yes' ? parseInt(form.guestsCount, 10) : 0,
+      message: form.message.trim(),
+      submittedAt: new Date().toISOString()
+    };
 
-      // Store in localStorage
+    // If Supabase is configured, write directly to cloud database
+    if (supabase) {
       try {
-        const existing = JSON.parse(localStorage.getItem('kayal_wedding_rsvps') || '[]');
-        existing.unshift(newRsvp);
-        localStorage.setItem('kayal_wedding_rsvps', JSON.stringify(existing));
-      } catch (err) {}
+        const { error } = await supabase.from('rsvps').insert([
+          {
+            name: newRsvp.name,
+            phone: newRsvp.phone,
+            attending: newRsvp.attending,
+            guests_count: newRsvp.guestsCount,
+            message: newRsvp.message
+          }
+        ]);
+        if (error) {
+          console.warn('Supabase RSVP insert notice:', error.message);
+        }
+      } catch (err) {
+        console.warn('Supabase network notice:', err);
+      }
+    }
 
-      onRsvpSubmit?.(newRsvp);
-      setLoading(false);
-      setSubmitted(true);
-    }, 400);
+    // Also store in localStorage as reliable fallback backup
+    try {
+      const existing = JSON.parse(localStorage.getItem('kayal_wedding_rsvps') || '[]');
+      existing.unshift(newRsvp);
+      localStorage.setItem('kayal_wedding_rsvps', JSON.stringify(existing));
+    } catch (err) {}
+
+    onRsvpSubmit?.(newRsvp);
+    setLoading(false);
+    setSubmitted(true);
   };
 
   return (
@@ -107,7 +124,6 @@ export const RsvpSection = ({ data, onRsvpSubmit }) => {
                       phone: '',
                       attending: 'yes',
                       guestsCount: '2',
-                      mealPreference: 'Vegetarian Sadhya',
                       message: ''
                     });
                   }}
@@ -181,40 +197,23 @@ export const RsvpSection = ({ data, onRsvpSubmit }) => {
                 </div>
 
                 {form.attending === 'yes' && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade-in">
-                    <div>
-                      <label className="block text-[11px] font-sans font-semibold tracking-wider uppercase text-[#5C5148] mb-1.5">
-                        Number of Guests Attending
-                      </label>
-                      <div className="relative">
-                        <select
-                          value={form.guestsCount}
-                          onChange={(e) => setForm({ ...form, guestsCount: e.target.value })}
-                          className="w-full py-2.5 px-4 pl-10 rounded-xl border border-[#5C5148]/20 bg-white text-[#2C241E] text-sm focus:outline-none focus:border-[#2A4D45] focus:ring-1 focus:ring-[#2A4D45]"
-                        >
-                          <option value="1">1 Person</option>
-                          <option value="2">2 Persons (Couple)</option>
-                          <option value="3">3 Persons</option>
-                          <option value="4">4 Persons (Family)</option>
-                          <option value="5">5+ Persons</option>
-                        </select>
-                        <Users size={15} className="absolute left-3.5 top-3 text-[#8A7E75]" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[11px] font-sans font-semibold tracking-wider uppercase text-[#5C5148] mb-1.5">
-                        Feast Preference
-                      </label>
+                  <div className="animate-fade-in">
+                    <label className="block text-[11px] font-sans font-semibold tracking-wider uppercase text-[#5C5148] mb-1.5">
+                      Number of Guests Attending
+                    </label>
+                    <div className="relative">
                       <select
-                        value={form.mealPreference}
-                        onChange={(e) => setForm({ ...form, mealPreference: e.target.value })}
-                        className="w-full py-2.5 px-4 rounded-xl border border-[#5C5148]/20 bg-white text-[#2C241E] text-sm focus:outline-none focus:border-[#2A4D45] focus:ring-1 focus:ring-[#2A4D45]"
+                        value={form.guestsCount}
+                        onChange={(e) => setForm({ ...form, guestsCount: e.target.value })}
+                        className="w-full py-2.5 px-4 pl-10 rounded-xl border border-[#5C5148]/20 bg-white text-[#2C241E] text-sm focus:outline-none focus:border-[#2A4D45] focus:ring-1 focus:ring-[#2A4D45]"
                       >
-                        <option value="Vegetarian Sadhya">Traditional Kerala Sadhya (Veg)</option>
-                        <option value="Jain Meal">Jain Sadhya</option>
-                        <option value="Any">Standard Wedding Feast</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Persons (Couple)</option>
+                        <option value="3">3 Persons</option>
+                        <option value="4">4 Persons (Family)</option>
+                        <option value="5">5+ Persons</option>
                       </select>
+                      <Users size={15} className="absolute left-3.5 top-3 text-[#8A7E75]" />
                     </div>
                   </div>
                 )}

@@ -103,7 +103,7 @@
     "gallery": true,
     "videos": true,
     "rsvp": true,
-    "guestbook": true,
-    "wishes": true
+    "guestbook": false,
+    "wishes": false
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DEFAULT_WEDDING_DATA, INITIAL_WISHES } from './constants';
+import { DEFAULT_WEDDING_DATA } from './constants';
 import { HeroSection } from './components/HeroSection';
 import { DetailsSection } from './components/DetailsSection';
 import { StorySection } from './components/StorySection';
@@ -8,7 +8,6 @@ import { VenueSection } from './components/VenueSection';
 import { GallerySection } from './components/GallerySection';
 import { VideoSection } from './components/VideoSection';
 import { RsvpSection } from './components/RsvpSection';
-import { GuestBookSection } from './components/GuestBookSection';
 import { FooterSection } from './components/FooterSection';
 import { MusicPlayer } from './components/MusicPlayer';
 import { AutoscrollEngine } from './components/AutoscrollEngine';
@@ -46,15 +45,6 @@ export function App() {
       .catch(() => {});
   }, []);
 
-  // Load wishes from localStorage or default
-  const [wishes, setWishes] = useState(() => {
-    try {
-      const saved = localStorage.getItem('kayal_wedding_wishes');
-      if (saved) return JSON.parse(saved);
-    } catch (e) {}
-    return INITIAL_WISHES;
-  });
-
   // Load RSVPs
   const [rsvps, setRsvps] = useState(() => {
     try {
@@ -63,14 +53,6 @@ export function App() {
     } catch (e) {}
     return [];
   });
-
-  const handleAddWish = (newWish) => {
-    const updated = [newWish, ...wishes];
-    setWishes(updated);
-    try {
-      localStorage.setItem('kayal_wedding_wishes', JSON.stringify(updated));
-    } catch (e) {}
-  };
 
   const handleRsvpSubmit = (newRsvp) => {
     setRsvps((prev) => [newRsvp, ...prev]);
@@ -118,14 +100,6 @@ export function App() {
           <RsvpSection
             data={data}
             onRsvpSubmit={handleRsvpSubmit}
-          />
-        )}
-
-        {data.sections?.guestbook !== false && (
-          <GuestBookSection
-            data={data}
-            wishes={wishes}
-            onAddWish={handleAddWish}
           />
         )}
 

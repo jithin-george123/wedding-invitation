@@ -69,12 +69,6 @@ export const HeroSection = ({ data }) => {
           >
             RSVP
           </button>
-          <button
-            onClick={() => scrollTo('wishes-section')}
-            className="kayal-nav-link font-sans text-xs tracking-[0.18em] uppercase text-[#5C5148] hover:text-[#2A4D45] transition-colors cursor-pointer"
-          >
-            Guest Book
-          </button>
         </div>
 
         {/* Right Corner Poetic Quote */}

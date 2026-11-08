@@ -108,8 +108,8 @@ greater`,
     gallery: true,
     videos: true,
     rsvp: true,
-    guestbook: true,
-    wishes: true
+    guestbook: false,
+    wishes: false
   }
 };
 
@@ -128,29 +128,4 @@ export const MUSIC_PRESETS = [
   { id: "hridayam-ambient", name: "Hridayam Theme Melody", artist: "Ambient Wedding", type: "youtube", youtubeId: "ScMzIvxBSi4", tag: "Peaceful" }
 ];
 
-export const INITIAL_WISHES = [
-  {
-    id: "wish_1",
-    name: "Dr. Ramesh & Family",
-    relationship: "Family",
-    tag: "❤️ With Love",
-    message: "Wishing dearest Jerome and Jomol an abundance of joy, laughter, and lifelong togetherness. Looking forward to celebrating with you at Daffodils!",
-    date: "Dec 28, 2026"
-  },
-  {
-    id: "wish_2",
-    name: "Akhil & Pooja",
-    relationship: "Friend",
-    tag: "✨ Best Wishes",
-    message: "Congratulations to the most wonderful couple! May your journey ahead be as joyful and enchanting as ever. Can't wait for the grand celebration!",
-    date: "Dec 29, 2026"
-  },
-  {
-    id: "wish_3",
-    name: "Sujith Menon",
-    relationship: "Colleague",
-    tag: "🎉 Congratulations",
-    message: "So thrilled for both of you, Jerome & Jomol! Wishing you both a lifetime of love and beautiful adventures together.",
-    date: "Dec 30, 2026"
-  }
-];
+export const INITIAL_WISHES = [];

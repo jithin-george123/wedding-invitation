@@ -811,8 +811,8 @@ export const KayalStudio = ({
                   <button
                     onClick={() => {
                       const csvContent = "data:text/csv;charset=utf-8," 
-                        + ["Name,Phone,Attending,Guests,Meal,Date,Message"].join(",") + "\n"
-                        + rsvps.map(r => `"${r.name}","${r.phone}","${r.attending ? 'Yes' : 'No'}","${r.guestsCount}","${r.mealPreference}","${r.submittedAt}","${(r.message || '').replace(/"/g, '""')}"`).join("\n");
+                        + ["Name,Phone,Attending,Guests,Date,Message"].join(",") + "\n"
+                        + rsvps.map(r => `"${r.name}","${r.phone}","${r.attending ? 'Yes' : 'No'}","${r.guestsCount}","${r.submittedAt}","${(r.message || '').replace(/"/g, '""')}"`).join("\n");
                       const encodedUri = encodeURI(csvContent);
                       const link = document.createElement("a");
                       link.setAttribute("href", encodedUri);
